@@ -23,9 +23,7 @@ export const getHourlyWeatherData = async (city, day) => {
 
 export function getHourFromTimestamp(timestamp) {
     const date = new Date(timestamp); // Crea un objeto Date a partir del timestamp
-    const hours = date.getHours();    // Obtiene la hora (en formato 24 horas)
-    const minutes = date.getMinutes(); // Obtiene los minutos
-    const seconds = date.getSeconds(); // Obtiene los segundos
-
-    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    const hours = date.getHours();    // Obtiene la hora (en formato 24 horas) 
+    const label  = hours > 12 ? 'PM' : 'AM';
+    return `${hours.toString().padStart(2, '0')}${label}`;
 }

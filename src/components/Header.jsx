@@ -62,13 +62,13 @@ const Header = ({ onWeatherDataChange }) => {
     };
 
     return (
-        <Navbar expand="md" className="bg-body-tertiary">
+        <Navbar expand="md" className='Navbar-header'>
             <Container fluid>
-                <Navbar.Brand>Weather Dashboard</Navbar.Brand>
+                <Navbar.Brand style={{color: 'var(--Antique-white)'}}>Weather Dashboard</Navbar.Brand>
                 <Navbar.Text className="me-auto my-2 my-lg-0">
-                    <BellIcon width={30} className="icon" />
-                    <MapPinIcon width={30} className="icon" />
-                    {city}
+                    <BellIcon width={30} className="icon" style={{color: 'var(--Antique-white)'}} />
+                    <MapPinIcon width={30} className="icon" style={{color: 'var(--Antique-white)'}} />
+                    <span style={{color: 'var(--Antique-white)'}}>{city}</span>
                 </Navbar.Text>
                 <Form className="d-flex">
                     <div className="search-container position-relative">

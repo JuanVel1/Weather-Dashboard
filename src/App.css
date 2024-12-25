@@ -3,16 +3,55 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  --sweet-blue: #b8ebff;
-  --sun-day: #ffd700;
-  --lightgray: #d3d3d3;
-  --rain: #4682b4;
-  --deep-gray: #2f4f4f;
-  --clear-night: #1e3a5f;
   overflow-y: auto; /* Habilita el scroll vertical */
+  background-color: var(--Antique-white) !important;
 }
 
+:root {
+  --Atomic-tangerine: #f79256;
+  --Antique-white: #feeedd;
+  --Dark-slate-gray: #274b44;
+  --Rojo: #eb0027;
+  --Pine-green: #0f7868;
+}
 
+.Navbar-header {
+  background-color: var(--Dark-slate-gray);
+  border-radius: 1rem;
+  padding: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.navbar-brand {
+  color: white !important;
+}
+
+.days-nav {
+  color: var(--Dark-slate-gray) !important;
+  font-weight: bold !important;
+  font-size: 1.2rem !important;
+  margin-right: 1rem;
+}
+
+.days-nav:hover {
+  color: var(--Antique-white) !important;
+  cursor: pointer;
+  background-color: var(--Pine-green);
+  border-radius: 1rem;
+  transition: background-color 0.3s;
+}
+
+.nav-link {
+  border-radius: 1rem !important;
+}
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    padding-bottom: 5rem;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -41,11 +80,6 @@
   }
 }
 
-
-.read-the-docs {
-  color: #888;
-}
-
 .search-container {
   position: relative;
   width: 100%;
@@ -63,30 +97,50 @@
   padding-left: 45px; /* Ajusta este valor según el tamaño del icono */
 }
 
+.icon {
+  color: white !important;
+}
+
 .icon:hover {
   cursor: pointer;
-  background-color: var(--lightgray);
+  background-color: var(--Pine-green);
+  color: var(--Rojo) !important;
   border-radius: 30%;
   transition: background-color 0.3s;
 }
 
-.map{
-  display: flex; 
+.map {
+  display: flex;
 }
 
-li{
+li {
   list-style: none;
 }
 
-.city{ 
+.city {
   margin-top: 2rem;
   padding: 1rem;
-  border-radius: 1rem; 
-  background-color: var(--lightgray);
+  border-radius: 1rem;
+  background-color: var(--Atomic-tangerine) !important;
+  color: var(--Antique-white) !important;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: 1px solid var(--Dark-slate-gray);
 }
-.other-cities{
+
+.city:hover {
+  background-color: var(--Pine-green) !important;
+  color: var(--Antique-white) !important;
+  font-weight: bold;
+  font-size: 1.7rem;
+  border: 1px solid var(--Dark-slate-gray);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.other-cities {
   width: 30%;
   height: 100%;
   justify-content: center;
-  align-self: center; 
+  align-self: center;
 }

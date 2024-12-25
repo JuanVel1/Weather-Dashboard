@@ -29,20 +29,28 @@ let data = [
   },
 ];
 
+
+async function getData(weatherData) {
+  return await getHourlyWeatherData(weatherData.city_name, weatherData.data[0].datetime);
+}
+
 const RainChart = ({ weatherData }) => {
-  
+
   const yAxisTicks = [2500, 5000, 7500]; // Define los valores numéricos que deseas mostrar en el eje Y
-  const yAxisLabels = { 2500: 'Heavy', 5000: 'Sunny', 7500: 'Rainy' }; // Mapea los valores numéricos a los valores de tipo string
-  let data2 = [];
-  
+  const yAxisLabels = { 2500: 'Rainy', 5000: 'Heavy', 7500: 'Sunny' }; // Mapea los valores numéricos a los valores de tipo string
+
   if (weatherData) {
     try {
-      data2 = getHourlyWeatherData(weatherData.city_name, weatherData.data[0].datetime);
-      console.log(data2);
-      data = data2.data.map(item => ({
-        name: getHourFromTimestamp(item.datetime),
-        temp: parseInt(item.temp) * 100
-      }));
+      getData(weatherData).then((wdata) => {
+        console.log(wdata.data);
+        data = wdata.data.map(item => (
+          {
+            name: getHourFromTimestamp(item.timestamp_local),
+            temp: parseInt(item.temp) * 100
+          }));
+      }).finally(
+        console.log(data)
+      );
 
     }
     catch (error) {
@@ -68,7 +76,7 @@ const RainChart = ({ weatherData }) => {
         <Tooltip />
         <Legend />
         <CartesianGrid strokeDasharray="3 3" />
-        <Bar dataKey="temp" fill="#8884d8" background={{ fill: '#eee' }} />
+        <Bar dataKey="temp" fill="#0f7868" background={{ fill: '#eee' }} />
       </BarChart>
     </ResponsiveContainer>
   );

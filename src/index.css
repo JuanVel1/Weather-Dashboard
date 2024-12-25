@@ -1,29 +1,21 @@
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 .card-temperature {
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
   display: flex;
 }
-.audiowide-regular {
-  font-family: "Audiowide", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 55px;
+
+.card-header{
+  background-color: transparent !important;
+}
+
+body{
+  background-color: var(--Antique-white) !important;
 }
 
 .card-info {
-  display: flex;
-  padding: 1em;
-  flex-direction: column;
+  font-size: small;
+  font-weight: lighter; 
 }
 h1 {
   font-size: 3.2em;
@@ -74,23 +66,49 @@ button:focus-visible {
   align-items: center;
   padding: 1em;
   margin: 0.2em;
-  border-radius: 8px;
-  box-shadow: 0 0 1em #00000033;
+  border-radius: 8px; 
   cursor: pointer;
+  font-weight: bold;
+  color: var(--Antique-white)  !important;
+  max-height: 250px;
+  background-color: var(--Dark-slate-gray) !important; 
 }
 
+.card-info{
+  color: var(--Antique-white) !important;
+}
 .card:hover {
   box-shadow: 0 0 1em #00000066;
+  font-family: "Audiowide", serif; 
+  font-style: normal; 
+  font-size: 12px;
+  transition:  font-size 0.7s; 
+}
+
+.card:hover .card-info {
+  display: block;
+}
+
+.card:hover .time {
+  display: block;
+}
+
+.card-info {
+  display: none;
+}
+
+.time {
+  display: none;
 }
 
 .days {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; 
 }
 
 .search-container {
   position: relative;
+  color: var(--Pine-green);
 }
 
 .suggestions-container {
