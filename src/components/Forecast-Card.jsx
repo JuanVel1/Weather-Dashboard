@@ -11,7 +11,7 @@ const ForecastCard = ({ day, temp, icon, time, wind_cdir, wind_spd, pressure, su
         </div>
         <div className={"card-temperature unselectedcard"}>
           <p>{temp}</p>
-          <img id={`${icon}`} src={`./src/assets/weather_icons/${icon}.png`} alt="temp day logo" width={60} />
+          <img id={`${icon}`} src={`${import.meta.env.BASE_URL}./src/assets/weather_icons/${icon}.png`} alt="temp day logo" width={60} />
         </div>
 
         <div className="card-info">

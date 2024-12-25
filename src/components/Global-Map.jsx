@@ -37,7 +37,7 @@ const GlobalMap = ({ weatherData }) => {
     const icon = document.createElement('div');
     icon.className = 'custom-marker';
     if (weatherData) {
-      icon.style.backgroundImage = `url('./src/assets/weather_icons/${weatherData.data[0].weather.icon}.png')`;
+      icon.style.backgroundImage = `url('${import.meta.env.BASE_URL}./src/assets/weather_icons/${weatherData.data[0].weather.icon}.png')`;
     }
     else {
       icon.style.backgroundImage = `url('./src/assets/weather_icons/a01d.png')`;
