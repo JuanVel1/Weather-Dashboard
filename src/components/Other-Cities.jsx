@@ -7,7 +7,7 @@ const OtherCities = () => {
 
   return (
     <div className="other-cities">
-      <h3>Other Large Cities</h3>
+      <h3>Other Cities</h3>
       <ul>
         {cities.map((city, index) => (
           <li key={index} className="city">
