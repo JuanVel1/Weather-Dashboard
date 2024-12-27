@@ -43,7 +43,7 @@ const OtherCities = () => {
             {city.name}
             {city.logo && (
               <img 
-                src={`${import.meta.env.BASE_URL}/src/assets/weather_icons/${city.logo}.png`} 
+                src={`https://github.com/JuanVel1/Weather-Dashboard/blob/master/src/assets/weather_icons/${city.logo}.png?raw=true`} 
                 alt="temp day logo" 
                 width={40} 
                 style={{ borderRadius: '1rem' }}
