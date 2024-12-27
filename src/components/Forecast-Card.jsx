@@ -11,7 +11,7 @@ const ForecastCard = ({ day, temp, icon, time, wind_cdir, wind_spd, pressure, su
         </div>
         <div className={"card-temperature unselectedcard"}>
           <p>{temp}</p>
-          <img id={`${icon}`} src={`${import.meta.env.BASE_URL}./src/assets/weather_icons/${icon}.png`} alt="temp day logo" width={60} />
+          <img id={`${icon}`} src={`https://github.com/JuanVel1/Weather-Dashboard/blob/master/src/assets/weather_icons/${icon}.png?raw=true`} alt="temp day logo" width={60} />
         </div>
 
         <div className="card-info">
@@ -25,16 +25,16 @@ const ForecastCard = ({ day, temp, icon, time, wind_cdir, wind_spd, pressure, su
 };
 
 ForecastCard.propTypes = {
-  selected: PropTypes.bool.isRequired,
-  icon: PropTypes.string.isRequired,
-  day: PropTypes.string.isRequired,
-  temp: PropTypes.string.isRequired,
-  time: PropTypes.string.isRequired,
-  wind_cdir: PropTypes.string.isRequired,
-  wind_spd: PropTypes.string.isRequired,
-  pressure: PropTypes.string.isRequired,
-  sunrise: PropTypes.string.isRequired,
-  sunset_ts: PropTypes.string.isRequired,
+  selected: PropTypes.bool,
+  icon: PropTypes.string,
+  day: PropTypes.string,
+  temp: PropTypes.string,
+  time: PropTypes.string,
+  wind_cdir: PropTypes.string,
+  wind_spd: PropTypes.string,
+  pressure: PropTypes.string,
+  sunrise: PropTypes.string,
+  sunset_ts: PropTypes.string,
 };
 
 export default ForecastCard;
